@@ -9,17 +9,25 @@ const cors = require("cors");
 
 dbConecction();
 
+// app.use(
+//   cors({
+//     origin: "https://prometica.vercel.app",
+//     // origin: "http://localhost:3000",
+//     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
+//     // allowedHeaders: ["Content-Type"],
+//     credentials: true,
+//   })
+// );
+// app.options("*", cors());
+
 app.use(
   cors({
-    origin: "https://prometica.vercel.app",
-    // origin: "http://localhost:3000",
-    methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
-    // allowedHeaders: ["Content-Type"],
+    origin: true,
     credentials: true,
   })
 );
 
-app.options("*", cors());
+app.options("*", cors({ origin: true, credentials: true }));
 
 // app.use((req, res, next) => {
 //   res.header("Access-Control-Allow-Origin", "https://prometica.vercel.app");
