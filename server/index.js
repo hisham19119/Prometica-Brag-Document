@@ -10,7 +10,7 @@ const cors = require("cors");
 dbConecction();
 app.use(
   cors({
-    origin: "https://prometica.vercel.app",
+    origin: "https://prometica.vercel.app/",
     // origin: "http://localhost:3000",
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
     // allowedHeaders: ["Content-Type"],
