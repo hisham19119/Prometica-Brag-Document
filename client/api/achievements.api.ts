@@ -1,34 +1,5 @@
-const API_URL = "http://localhost:4000/api/documents";
+const API_URL = "https://prometica-server.vercel.app/api/documents";
 
-// Get all achievements for a document
-// export const getAchievements = async (documentId: string) => {
-//   try{
-//     const res = await fetch(`${API_URL}/${documentId}/achievements`, {
-//       credentials: "include",
-//     });
-//     if (!res.ok) throw new Error("Failed to fetch achievements");
-//     return res.json();
-//   }catch(err){
-//     console.error("getAchievements error:", err);
-//     throw err;
-//   }
-
-
-// };
-
-// Get a single achievement by ID
-// export const getAchievement = async (
-//   documentId: string,
-//   achievementId: string
-// ) => {
-//   const res = await fetch(`${API_URL}/${documentId}/achievements/${achievementId}`, {
-//     credentials: "include",
-//   });
-//   if (!res.ok) throw new Error("Failed to fetch achievement");
-//   return res.json();
-// };
-
-// Create a new achievement
 export const createAchievement = async (
   documentId: string,
   achievement: { title: string; accomplishment: string; category: string; date: string; description: string; impact: string }
