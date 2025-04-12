@@ -27,6 +27,16 @@ app.use("/api/documents", documentRoutes);
 app.use("/api/auth/", authRouter);
 app.use("/api/users/", userRouter);
 
+app.get("/", (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: "🚀 Prometica API is running successfully!",
+    timestamp: new Date().toISOString(),
+    version: "1.0.0",
+    environment: process.env.NODE_ENV || "Production",
+  });
+});
+
 app.listen("4000", () => {
   console.log("listening to port 4000 now .....");
 });
