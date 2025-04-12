@@ -11,15 +11,15 @@ dbConecction();
 app.use(
   cors({
     origin: "https://prometica.vercel.app",
-    // origin: "http://localhost:3000",
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
-    // allowedHeaders: ["Content-Type"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
   })
 );
 
-app.options("*", cors());
+app.options("*", (req, res) => {
+  res.sendStatus(200);
+});
 
 app.use(express.json());
 app.use(cookieParser());
