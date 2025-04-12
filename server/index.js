@@ -10,7 +10,7 @@ const cors = require("cors");
 dbConecction();
 app.use(
   cors({
-    origin: "https://prometica.vercel.app/",
+    origin: "https://prometica.vercel.app",
     // origin: "http://localhost:3000",
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
     // allowedHeaders: ["Content-Type"],
@@ -24,8 +24,8 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 app.use("/api/documents", documentRoutes);
-app.use("/api/auth/", authRouter);
-app.use("/api/users/", userRouter);
+app.use("/api/auth", authRouter);
+app.use("/api/users", userRouter);
 
 app.get("/", (req, res) => {
   res.status(200).json({
