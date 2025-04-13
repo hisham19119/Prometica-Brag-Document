@@ -9,27 +9,27 @@ const cors = require("cors");
 
 dbConecction();
 
-// app.use(
-//   cors({
-//     origin: "https://prometica.vercel.app",
-//     // origin: "http://localhost:3000",
-//     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
-//     allowedHeaders: ["Content-Type"],
-//     credentials: true,
-//   })
-// );
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "https://prometica.vercel.app");
-  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, PATCH");
-  res.header("Access-Control-Allow-Headers", "Content-Type");
-  res.header("Access-Control-Allow-Credentials", "true");
-  if (req.method === "OPTIONS") {
-    return res.sendStatus(200);
-  }
-  next();
-});
+app.use(
+  cors({
+    origin: "https://prometica.vercel.app",
+    // origin: "http://localhost:3000",
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
+    // allowedHeaders: ["Content-Type"],
+    credentials: true,
+  })
+);
+// app.use((req, res, next) => {
+//   res.header("Access-Control-Allow-Origin", "https://prometica.vercel.app");
+//   res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, PATCH");
+//   res.header("Access-Control-Allow-Headers", "Content-Type");
+//   res.header("Access-Control-Allow-Credentials", "true");
+//   if (req.method === "OPTIONS") {
+//     return res.sendStatus(200);
+//   }
+//   next();
+// });
 
-app.options("*", cors());
+// app.options("*", cors());
 // app.use(cors());
 // app.use(cors({ origin: "*", credentials: false }));
 
