@@ -18,7 +18,7 @@ app.use(
     credentials: true,
   })
 );
-app.options("*", cors());
+// app.options("*", cors());
 
 // app.use(
 //   cors({
@@ -65,6 +65,6 @@ app.get("/", (req, res) => {
   });
 });
 
-app.listen("4000", () => {
-  console.log("listening to port 4000 now .....");
-});
+// app.listen("4000", () => {
+//   console.log("listening to port 4000 now .....");
+// });
