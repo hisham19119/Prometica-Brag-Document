@@ -29,7 +29,7 @@ app.use(
 //   next();
 // });
 
-// app.options("*", cors());
+app.options("*", cors());
 // app.use(cors());
 // app.use(cors({ origin: "*", credentials: false }));
 
