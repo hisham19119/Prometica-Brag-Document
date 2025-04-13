@@ -15,7 +15,7 @@ import { useLanguage } from "@/context/LanguageProvider";
 import { ThemeToggle } from "../ThemeToggle";
 import { LanguageToggle } from "../LanguageToggle";
 import MobileNav from "./MobileNav";
-import { useAuth } from "@/context/AuthContext";
+import { useAuth } from "@/api/AuthContext";
 import toast from "react-hot-toast";
 import { usePathname, useRouter } from "next/navigation";
 const Header = () => {

@@ -1,5 +1,5 @@
 "use client";
-import { useAuth } from "@/context/AuthContext";
+import { useAuth } from "@/api/AuthContext";
 import { useLanguage } from "@/context/LanguageProvider";
 import Link from "next/link";
 import React from "react";

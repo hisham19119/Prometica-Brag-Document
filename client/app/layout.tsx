@@ -6,7 +6,7 @@ import { ThemeProvider } from "@/context/ThemeProvider";
 import { LanguageProvider } from "@/context/LanguageProvider";
 // import { BrowserRouter } from "react-router-dom";
 import "./globals.css";
-import { AuthProvider } from "@/context/AuthContext";
+import { AuthProvider } from "@/api/AuthContext";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"; // Import QueryClient and QueryClientProvider
 
 const geistSans = Geist({
@@ -45,9 +45,7 @@ export default function RootLayout({
         <QueryClientProvider client={queryClient}>
           <LanguageProvider>
             <ThemeProvider>
-              <AuthProvider>
-                {children}
-              </AuthProvider>
+              <AuthProvider>{children}</AuthProvider>
             </ThemeProvider>
           </LanguageProvider>
         </QueryClientProvider>

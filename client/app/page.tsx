@@ -26,7 +26,7 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageProvider";
-import { useAuth } from "@/context/AuthContext";
+import { useAuth } from "@/api/AuthContext";
 
 const Home = () => {
   const { t, language } = useLanguage();

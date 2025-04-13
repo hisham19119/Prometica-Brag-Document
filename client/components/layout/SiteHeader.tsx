@@ -7,7 +7,7 @@ import { LanguageToggle } from "../LanguageToggle";
 import MobileNav from "./MobileNav";
 import { useLanguage } from "@/context/LanguageProvider";
 import Link from "next/link";
-import { useAuth } from "@/context/AuthContext";
+import { useAuth } from "@/api/AuthContext";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
 const SiteHeader = () => {

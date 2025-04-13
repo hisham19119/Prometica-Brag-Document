@@ -27,7 +27,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { useAuth } from "@/context/AuthContext";
+import { useAuth } from "@/api/AuthContext";
 import { useLanguage } from "@/context/LanguageProvider";
 
 const registerSchema = z
