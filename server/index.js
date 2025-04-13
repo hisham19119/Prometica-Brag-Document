@@ -11,7 +11,8 @@ dbConecction();
 
 app.use(
   cors({
-    origin: "https://prometica.vercel.app", // Allow only this origin
+    origin: "*", // Allow only this origin
+    // origin: "https://prometica.vercel.app", // Allow only this origin
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
     credentials: true, // Allow credentials
   })
@@ -67,6 +68,6 @@ app.get("/", (req, res) => {
   });
 });
 
-// app.listen("4000", () => {
-//   console.log("listening to port 4000 now .....");
-// });
+app.listen("4000", () => {
+  console.log("listening to port 4000 now .....");
+});
