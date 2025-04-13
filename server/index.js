@@ -14,7 +14,7 @@ app.use(
     origin: "https://prometica.vercel.app",
     // origin: "http://localhost:3000",
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
-    allowedHeaders: ["Content-Type , Authorization"],
+    allowedHeaders: ["Content-Type "],
     credentials: true,
   })
 );
@@ -77,6 +77,6 @@ app.get("/", (req, res) => {
   });
 });
 
-app.listen("4000", () => {
-  console.log("listening to port 4000 now .....");
-});
+// app.listen("4000", () => {
+//   console.log("listening to port 4000 now .....");
+// });
