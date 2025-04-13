@@ -11,9 +11,9 @@ dbConecction();
 
 app.use(
   cors({
-    origin: "https://prometica-hisham19119s-projects.vercel.app/", // Allow only this origin
-    // origin: "https://prometica.vercel.app", // Allow only this origin
-    // methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
+    // origin: "https://prometica-hisham19119s-projects.vercel.app/", // Allow only this origin
+    origin: "https://prometica.vercel.app/", // Allow only this origin
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
     credentials: true, // Allow credentials
   })
 );
