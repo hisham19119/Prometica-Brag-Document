@@ -9,16 +9,16 @@ const cors = require("cors");
 
 dbConecction();
 
-// app.use(
-//   cors({
-//     origin: "*", // Allow only this origin
-//     // origin: "https://prometica.vercel.app", // Allow only this origin
-//     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
-//     credentials: true, // Allow credentials
-//   })
-// );
-// app.options("*", cors());
-app.use(cors({ origin: "*", credentials: false }));
+app.use(
+  cors({
+    origin: "https://prometica.vercel.app/", // Allow only this origin
+    // origin: "https://prometica.vercel.app", // Allow only this origin
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
+    credentials: true, // Allow credentials
+  })
+);
+app.options("*", cors());
+// app.use(cors({ origin: "*", credentials: false }));
 
 // app.options("*", cors());
 
