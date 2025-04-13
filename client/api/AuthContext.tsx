@@ -69,7 +69,9 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
       "https://prometica-server.vercel.app/api/auth/register",
       {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Access-Control-Allow-Origin": "https://prometica.vercel.app",
+        },
         body: JSON.stringify({ email, password, name, confirmPassword }),
         credentials: "include",
       }
