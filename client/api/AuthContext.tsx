@@ -33,7 +33,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
-        // credentials: "include",
+        credentials: "include",
       }
     );
 
@@ -52,7 +52,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
   const logout = async () => {
     await fetch("https://prometica-server.vercel.app/api/auth/logout", {
       method: "POST",
-      // credentials: "include",
+      credentials: "include",
     });
     setUser(null);
     localStorage.removeItem("token");
@@ -71,7 +71,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password, name, confirmPassword }),
-        // credentials: "include",
+        credentials: "include",
       }
     );
 
@@ -102,7 +102,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
               headers: {
                 Authorization: `Bearer ${token}`,
               },
-              // credentials: "include",
+              credentials: "include",
             }
           );
 
