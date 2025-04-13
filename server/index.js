@@ -11,11 +11,9 @@ dbConecction();
 
 app.use(
   cors({
-    origin: "https://prometica.vercel.app",
-    // origin: "http://localhost:3000",
+    origin: "https://prometica.vercel.app", // Allow only this origin
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
-    // allowedHeaders: ["Content-Type"],
-    credentials: true,
+    credentials: true, // Allow credentials
   })
 );
 app.options("*", cors());
