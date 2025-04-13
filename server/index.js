@@ -16,7 +16,7 @@ app.use(
     credentials: true, // Allow credentials
   })
 );
-app.options("*", cors());
+// app.options("*", cors());
 
 // app.use(
 //   cors({
@@ -53,6 +53,10 @@ app.use("/api/documents", documentRoutes);
 app.use("/api/auth", authRouter);
 app.use("/api/users", userRouter);
 
+app.use((err, req, res, next) => {
+  console.error(err);
+  res.status(err.status || 500).json({ error: err.message });
+});
 app.get("/", (req, res) => {
   res.status(200).json({
     success: true,
@@ -63,6 +67,6 @@ app.get("/", (req, res) => {
   });
 });
 
-app.listen("4000", () => {
-  console.log("listening to port 4000 now .....");
-});
+// app.listen("4000", () => {
+//   console.log("listening to port 4000 now .....");
+// });
