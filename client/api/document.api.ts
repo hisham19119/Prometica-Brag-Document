@@ -3,6 +3,7 @@ const API_URL = "https://prometica-srv.vercel.app/api/documents";
 
 export const getDocuments = async () => {
     const res = await fetch(API_URL, {
+      method: "GET",
       credentials: "include",
     });
     if (!res.ok) throw new Error("Failed to fetch documents");
@@ -11,6 +12,7 @@ export const getDocuments = async () => {
   
   export const getDocument = async (id: string) => {
     const res = await fetch(`${API_URL}/${id}`, {
+      method: "GET",
       credentials: "include",
     });
     if (!res.ok) throw new Error("Failed to fetch document");
