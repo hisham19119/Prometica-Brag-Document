@@ -177,7 +177,7 @@ const Dashboard = () => {
                   <CardContent className="pb-4">
                     <div className="flex items-center text-sm text-[(var(--muted-foreground))]">
                       <span>
-                        {t("achievements")}(doc?.achievements?.length)
+                        {t("achievements")}({doc?.achievements?.length})
                       </span>
                       <span className="mx-2">•</span>
                       <span>
