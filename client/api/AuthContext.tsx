@@ -86,6 +86,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
 
     localStorage.setItem("token", data.data.token);
     localStorage.setItem("user", JSON.stringify(data.data.user));
+    // cookie.set(data.data.token);
     console.log("user is", data.data.user);
     setUser(data.data.user);
   };
