@@ -1,6 +1,5 @@
 "use client";
 import React, { createContext, useContext, useEffect, useState } from "react";
-import Cookies from "js-cookie";
 
 interface User {
   id: string;
@@ -48,7 +47,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
 
     localStorage.setItem("token", data.data.token);
     localStorage.setItem("user", JSON.stringify(data.data.user));
-    Cookies.set("token", data.data.token, { expires: 1 });
+
     setUser(data.data.user);
   };
 
