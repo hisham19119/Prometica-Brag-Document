@@ -28,7 +28,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
 
   const login = async (email: string, password: string) => {
     const response = await fetch(
-      "https://prometica-server.vercel.app/api/auth/login",
+      "https://prometica-srv.vercel.app/api/auth/login",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -51,7 +51,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
   };
 
   const logout = async () => {
-    await fetch("https://prometica-server.vercel.app/api/auth/logout", {
+    await fetch("https://prometica-srv.vercel.app/api/auth/logout", {
       method: "POST",
       credentials: "include",
     });
@@ -67,7 +67,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
     confirmPassword: string
   ) => {
     const response = await fetch(
-      "https://prometica-server.vercel.app/api/auth/register",
+      "https://prometica-srv.vercel.app/api/auth/register",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -99,7 +99,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
       } else if (token) {
         try {
           const response = await fetch(
-            "https://prometica-server.vercel.app/api/auth/me",
+            "https://prometica-srv.vercel.app/api/auth/me",
             {
               headers: {
                 Authorization: `Bearer ${token}`,

@@ -1,4 +1,4 @@
-const API_URL = "https://prometica-server.vercel.app/api/documents";
+const API_URL = "https://prometica-srv.vercel.app/api/documents";
 
 
 export const getDocuments = async () => {
